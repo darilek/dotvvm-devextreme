@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\Button.cs" />
+    <Compile Include="Controls\DateBox.cs" />
     <Compile Include="Controls\HtmlDevExtremeControlBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
