@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace DotVVM.DevExtreme.Controls
 {
-    /*public class DateBox : HtmlDevExtremeControlBase
+    public enum ButtonType
     {
-        public DateBox() : base("dx-date-box", "dxDateBox")
-        {
-            
-        }
-    }*/
+        Normal = 0,
+        Default,
+        Back,
+        Danger,
+        Success
+    }
 }

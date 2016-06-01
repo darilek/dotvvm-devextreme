@@ -1,0 +1,10 @@
+﻿@viewModel DotVVM.DevExtreme.Samples.ViewModels.DefaultViewModel, DotVVM.DevExtreme.Samples
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="content">
+    <dot:Repeater WrapperTagName="ul" DataSource="{value: Routes }">
+        <li><a href="{value: Url}">{{value: RouteName}}</a></li>
+    </dot:Repeater>
+    <div>Number of Tests: {{value: Routes.Count}}</div>
+
+</dot:Content>

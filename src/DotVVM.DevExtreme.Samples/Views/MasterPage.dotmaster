@@ -1,0 +1,26 @@
+﻿@viewModel DotVVM.DevExtreme.Samples.ViewModels.ISamplesViewModelBase, DotVVM.DevExtreme.Samples
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>DevExtreme widgets wrappers for DotVVM</title>
+    <style>
+        ul li {
+            padding: 2px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <dot:ContentPlaceHolder ID="content">
+
+    </dot:ContentPlaceHolder>
+</body>
+</html>
+
+

@@ -1,0 +1,12 @@
+﻿@viewModel DotVVM.DevExtreme.Samples.ViewModels.ControlSamples.Button.ButtonViewModel, DotVVM.DevExtreme.Samples
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="content">
+    <dx:Button Text="Classic button" Click="{command: Submit()}" />
+    <dx:Button Text="Button with icon" Icon="search" Click="{command: Submit()}" />
+    <dx:Button Text="Button with type" Icon="clear" Type="Danger" Click="{command: Submit()}" />
+    <div>
+        Number od clicks: {{value: NumberOfClicks}}
+    </div>
+</dot:Content>
+

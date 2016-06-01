@@ -89,10 +89,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasicValidations.cs" />
     <Compile Include="Controls\Button.cs" />
+    <Compile Include="Controls\ButtonType.cs" />
     <Compile Include="Controls\DateBox.cs" />
     <Compile Include="Controls\HtmlDevExtremeControlBase.cs" />
+    <Compile Include="Controls\KnockoutExtensions.cs" />
+    <Compile Include="DevExtremeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceNames.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
