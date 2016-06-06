@@ -2,11 +2,35 @@
 @masterPage Views/MasterPage.dotmaster
 
 <dot:Content ContentPlaceHolderID="content">
+    <dot:Button Text="DotVVM button" Click="{command: Submit()}" />
     <dx:Button Text="Classic button" Click="{command: Submit()}" />
+    <dx:Button Icon="search" Hint="Button with icon only" Click="{command: Submit()}" />
     <dx:Button Text="Button with icon" Icon="search" Click="{command: Submit()}" />
     <dx:Button Text="Button with type" Icon="clear" Type="Danger" Click="{command: Submit()}" />
     <div>
         Number od clicks: {{value: NumberOfClicks}}
+    </div>
+
+    <dx:FieldSet>
+        <HeaderTemplate>
+            Hellow world
+        </HeaderTemplate>
+    </dx:FieldSet>
+
+    <div class="dx-fieldset">
+        <div class="dx-fieldset-header">Default mode</div>
+        <div class="dx-field">
+            <div class="dx-field-label">Normal</div>
+            <div class="dx-field-value">
+                <dx:Button Text="Default"></dx:Button>
+            </div>
+        </div>
+        <div class="dx-field">
+            <div class="dx-field-label">Disabled</div>
+            <div class="dx-field-value">
+                <dx:Button Text="Disabled" Enabled="false"></dx:Button>
+            </div>
+        </div>
     </div>
 </dot:Content>
 

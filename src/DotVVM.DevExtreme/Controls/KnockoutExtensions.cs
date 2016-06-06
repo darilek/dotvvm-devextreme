@@ -24,6 +24,21 @@ namespace DotVVM.DevExtreme.Controls
             }
         }
 
+        public static void AddSimpleBinding(this KnockoutBindingGroup group, string name, DotvvmControl control, DotvvmProperty property)
+        {
+            var binding = control.GetValueBinding(property);
+            if (binding == null)
+            {
+                group.Add(name, property.GetValue(control).ToString(), true);
+
+            } else
+            {
+                string expression = control.GetValueBinding(property).GetKnockoutBindingExpression();
+                group.Add(name, $"{expression}");
+
+            }
+        }
+
         public static void AddExtender(this KnockoutBindingGroup group, string name, DotvvmControl control, DotvvmProperty property, string extenderName)
         {
             var binding = control.GetValueBinding(property);

@@ -24,7 +24,16 @@ namespace DotVVM.DevExtreme.Controls
         }
 
         public static readonly DotvvmProperty TextProperty =
-            DotvvmProperty.Register<string, Button>(t => t.Text, "");
+            DotvvmProperty.Register<string, Button>(t => t.Text, String.Empty);
+
+        public string Hint
+        {
+            get { return (string)GetValue(HintProperty); }
+            set { SetValue(HintProperty, value); }
+        }
+        public static readonly DotvvmProperty HintProperty
+            = DotvvmProperty.Register<string, Button>(c => c.Hint, String.Empty);
+
 
         public bool Enabled
         {
@@ -68,9 +77,11 @@ namespace DotVVM.DevExtreme.Controls
         protected override void AddWidgetBindingProperties(KnockoutBindingGroup group)
         {
             base.AddWidgetBindingProperties(group);
-            group.Add("text", this, TextProperty, () => group.Add("text", $"'{this.Text}'"));
+            //group.Add("text", this, TextProperty, () => group.Add("text", $"'{this.Text}'"));
+            group.AddSimpleBinding("text", this, TextProperty);
             group.Add("icon", this, IconProperty, () => group.Add("icon", $"'{this.Icon}'"));
             group.Add("type", $"'{this.Type}'".ToLower());
+            group.AddSimpleBinding("hint", this, HintProperty);
             group.AddNegation("disabled", this, EnabledProperty, () => this.Enabled);
 
             ICommandBinding commandBinding = base.GetCommandBinding(ClickProperty, true);
