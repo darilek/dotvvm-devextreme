@@ -21,10 +21,10 @@ namespace DotVVM.DevExtreme.Samples
 
             config.AddDevExtremeConfiguration();
 
-            config.Resources.Register(ResourceNames.Styles.DxCommon, new StylesheetResource() { Url = "http://cdn3.devexpress.com/jslib/15.2.9/css/dx.common.css" });
-            config.Resources.Register(ResourceNames.Styles.DxLight, new StylesheetResource() { Url = "http://cdn3.devexpress.com/jslib/15.2.9/css/dx.light.css", Dependencies = new [] {ResourceNames.Styles.DxCommon}});
+            //config.Resources.Register(ResourceNames.Styles.DxCommon, new StylesheetResource() { Url = "http://cdn3.devexpress.com/jslib/15.2.9/css/dx.common.css" });
+            //config.Resources.Register(ResourceNames.Styles.DxLight, new StylesheetResource() { Url = "http://cdn3.devexpress.com/jslib/15.2.9/css/dx.light.css", Dependencies = new [] {ResourceNames.Styles.DxCommon}});
 
-            config.Resources.Register(ResourceNames.Scripts.DxWebApps, new ScriptResource() { CdnUrl = "http://cdn3.devexpress.com/jslib/15.2.9/js/dx.webappjs.js", Dependencies = new[] { ResourceConstants.JQueryResourceName, ResourceConstants.KnockoutJSResourceName, ResourceConstants.GlobalizeResourceName } });
+            //config.Resources.Register(ResourceNames.Scripts.DxWebApps, new ScriptResource() { CdnUrl = "http://cdn3.devexpress.com/jslib/15.2.9/js/dx.webappjs.js", Dependencies = new[] { ResourceConstants.JQueryResourceName, ResourceConstants.KnockoutJSResourceName, ResourceConstants.GlobalizeResourceName } });
 
         }
     }

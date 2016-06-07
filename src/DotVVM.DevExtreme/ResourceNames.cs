@@ -11,13 +11,14 @@ namespace DotVVM.DevExtreme
     {
         public static class Styles
         {
-            public const string DxCommon = "dx.common.css";
-            public const string DxLight = "dx.light.css";
+            public const string DxCommon = "dx.common";
+            public const string DxTheme = "dx.theme";
         }
 
         public  static class Scripts
         {
-            public const string DxWebApps = "dx.webappjs.js";
+            public const string DotvvmDevExtreme = "DotVVM.DevExtreme";
+            public const string DxWebApps = "dx.webappjs";
         }
     }
 }

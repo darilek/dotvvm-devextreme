@@ -10,7 +10,7 @@ using DotVVM.Framework.Hosting;
 
 namespace DotVVM.DevExtreme.Controls
 {
-    public class Button : HtmlDevExtremeControlBase
+    public class Button : HtmlWidgetControlBase
     {
         public Button() : base("dx-button", "dxButton")
         {
