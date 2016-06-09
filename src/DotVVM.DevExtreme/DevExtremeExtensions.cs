@@ -47,7 +47,7 @@ namespace DotVVM.DevExtreme
             ScriptResource devExtremeResource = new ScriptResource()
             {
                 Url = options.DevExtremeJsUrl,
-                Dependencies = new [] { ResourceConstants.JQueryResourceName, ResourceConstants.KnockoutJSResourceName, ResourceConstants.GlobalizeResourceName}
+                Dependencies = new [] { ResourceConstants.JQueryResourceName, ResourceConstants.KnockoutJSResourceName, ResourceConstants.GlobalizeResourceName, ResourceConstants.GlobalizeCultureResourceName}
             };
 
             ScriptResource dotvvmDevExtremeResource = new ScriptResource()

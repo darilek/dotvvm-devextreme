@@ -1,0 +1,2 @@
+﻿
+Globalize.cultureSelector = "cs-CZ";

@@ -44,10 +44,30 @@ namespace DotVVM.DevExtreme.Controls
         public static readonly DotvvmProperty ChangedProperty
             = DotvvmProperty.Register<Command, DateBox>(c => c.Changed, null);
 
-        protected override void OnInit(IDotvvmRequestContext context)
+
+        protected override void AddWidgetBindingProperties(KnockoutBindingGroup @group)
         {
-            context.ResourceManager.AddRequiredResource(ResourceNames.Scripts.DotvvmDevExtreme);
-            base.OnInit(context);
+            base.AddWidgetBindingProperties(@group);
+            //group.AddExtender("value", this, SelectedDateProperty, "dxDatetime");
+            group.AddSimpleBinding("value", this, SelectedDateProperty);
+            group.AddNegation("disabled", this, EnabledProperty, () => this.Enabled);
+
+            ICommandBinding commandBinding = base.GetCommandBinding(ChangedProperty, true);
+            if (commandBinding != null)
+            {
+                string commandCall = KnockoutHelper.GenerateClientPostBackScript("Changed", commandBinding, this, false, false, false);
+                group.Add("onChange", $"function(e) {{ (function() {{ {commandCall} }}).apply(e.element[0]); return false; }}");
+            }
+        }
+
+        protected override void AddAttributesToRender(IHtmlWriter writer, IDotvvmRequestContext context)
+        {
+            //base.AddAttributesToRender(writer, context);
+
+            KnockoutBindingGroup group = new KnockoutBindingGroup();
+            AddWidgetBindingProperties(group);
+
+            writer.AddAttribute("params", group.ToString());
         }
 
         /*protected override void AddAttributesToRender(IHtmlWriter writer, IDotvvmRequestContext context)

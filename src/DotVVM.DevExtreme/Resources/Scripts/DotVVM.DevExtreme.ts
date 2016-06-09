@@ -1,9 +1,9 @@
 ﻿/// <reference path="typings/knockout/knockout.d.ts" />
 /// <reference path="typings/dotvvm/DotVVM.d.ts" />
 /// <reference path="typings/globalize/globalize.d.ts" />
-
+/// <reference path="typings/devextreme/devextreme.d.ts" />
 ko.extenders["dxDatetime"] = (target, option) => {
-    target.datetime = ko.computed({
+    target.dxDatetime = ko.computed({
         read: function () {
             // return new Date(this());
             return dotvvm.globalize.formatString("yyyy/MM/dd", this());
@@ -23,11 +23,20 @@ ko.extenders["dxDatetime"] = (target, option) => {
 ko.components.register(
     "dx-date-box",
     {
-        viewModel: function (params) {
-            this.value = params.value;
-            this.value.extend({ datetime: null });
+        viewModel: function (params: DevExpress.ui.dxDateBoxOptions) {
+            var self = this;
+            self.params = params;
+            self.onChange = (e) => {
+                if (this.params.onChange) {
+                    this.params.onChange(e);
+                }
+
+            }
+            if (ko.isObservable(params.value)) {
+                params.value.extend({ dxDatetime: null });
+            }
         },
 
-        template: "<div data-bind='dxDateBox : {value: value.datetime}'></div>"
+        template: "<div data-bind='dxDateBox : {value : params.value.dxDatetime, disabled: params.disabled, onValueChanged: onChange}'></div>"
     }
 );

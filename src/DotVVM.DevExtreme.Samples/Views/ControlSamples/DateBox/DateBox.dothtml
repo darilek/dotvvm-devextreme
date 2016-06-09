@@ -1,0 +1,26 @@
+﻿@viewModel DotVVM.DevExtreme.Samples.ViewModels.ControlSamples.DateBox.DateBoxViewModel, DotVVM.DevExtreme.Samples
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="content">
+
+    <div class="dx-form" style="width: 500px">
+        <div class="dx-fieldset">
+            <div class="dx-fieldset-header">Default mode</div>
+            <div class="dx-field">
+                <div class="dx-field-label">Normal</div>
+                <div class="dx-field-value">
+                    <dx:DateBox SelectedDate="{value: SelectedDate}"></dx:DateBox>
+                </div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">Disabled</div>
+                <div class="dx-field-value">
+                    <dx:DateBox SelectedDate="{value: SelectedDate}" Enabled="false"></dx:DateBox>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</dot:Content>
+

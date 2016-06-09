@@ -15,16 +15,17 @@ namespace DotVVM.DevExtreme.Samples
         // For more information about this class, visit https://dotvvm.com/docs/tutorials/basics-project-structure
         public void Configure(DotvvmConfiguration config, string applicationPath)
         {
+            //config.AllowBindingDebugging = true;
+
+            config.DefaultCulture = "cs-CZ";
             config.RouteTable.Add("Default", "", "Views/Default.dothtml");
             config.RouteTable.AutoDiscoverRoutes(new DefaultRouteStrategy(config));
 
+            config.Resources.Register("common", new ScriptResource() { Url = "~/Scripts/common.js", Dependencies = new[] { ResourceConstants.GlobalizeResourceName } });
+
+            config.Resources.Register(ResourceConstants.GlobalizeCultureResourceName, new ScriptResource() {Url = "~/Scripts/jquery.globalize/cultures/globalize.culture.cs-CZ.js" });
 
             config.AddDevExtremeConfiguration();
-
-            //config.Resources.Register(ResourceNames.Styles.DxCommon, new StylesheetResource() { Url = "http://cdn3.devexpress.com/jslib/15.2.9/css/dx.common.css" });
-            //config.Resources.Register(ResourceNames.Styles.DxLight, new StylesheetResource() { Url = "http://cdn3.devexpress.com/jslib/15.2.9/css/dx.light.css", Dependencies = new [] {ResourceNames.Styles.DxCommon}});
-
-            //config.Resources.Register(ResourceNames.Scripts.DxWebApps, new ScriptResource() { CdnUrl = "http://cdn3.devexpress.com/jslib/15.2.9/js/dx.webappjs.js", Dependencies = new[] { ResourceConstants.JQueryResourceName, ResourceConstants.KnockoutJSResourceName, ResourceConstants.GlobalizeResourceName } });
 
         }
     }

@@ -2,19 +2,24 @@
 @masterPage Views/MasterPage.dotmaster
 
 <dot:Content ContentPlaceHolderID="content">
+
+    <p>
+        Number of clicks {{value: NumberOfClicks}}
+    </p>
+
     <div class="dx-form" style="width: 500px">
         <div class="dx-fieldset">
             <div class="dx-fieldset-header">Default mode</div>
             <div class="dx-field">
                 <div class="dx-field-label">Normal</div>
                 <div class="dx-field-value">
-                    <dx:Button Text="Default"></dx:Button>
+                    <dx:Button Text="Default" Click="{command: Submit()}"></dx:Button>
                 </div>
             </div>
             <div class="dx-field">
                 <div class="dx-field-label">Disabled</div>
                 <div class="dx-field-value">
-                    <dx:Button Text="Disabled" Enabled="false"></dx:Button>
+                    <dx:Button Text="Disabled" Enabled="false" Click="{command: Submit()}"></dx:Button>
                 </div>
             </div>
         </div>
@@ -30,7 +35,7 @@
             <div class="dx-field">
                 <div class="dx-field-label">Without text</div>
                 <div class="dx-field-value">
-                    <dx:Button Icon="search" Hint="Button with icon only" />
+                    <dx:Button Icon="search" Hint="Button with icon only" Click="{command: Submit()}" />
                 </div>
             </div>
         </div>

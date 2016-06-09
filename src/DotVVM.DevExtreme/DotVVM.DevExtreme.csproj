@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Resources\Scripts\DotVVM.DevExtreme.ts" />
+    <TypeScriptCompile Include="Resources\Scripts\typings\devextreme\devextreme.d.ts" />
     <TypeScriptCompile Include="Resources\Scripts\typings\dotvvm\DotVVM.d.ts" />
     <TypeScriptCompile Include="Resources\Scripts\typings\globalize\globalize.d.ts" />
     <TypeScriptCompile Include="Resources\Scripts\typings\jquery\jquery.d.ts" />

@@ -103,8 +103,11 @@
     <Compile Include="Startup.cs" />
     <Compile Include="DotvvmStartup.cs" />
     <Compile Include="ViewModels\ControlSamples\Button\ButtonViewModel.cs" />
+    <Compile Include="ViewModels\ControlSamples\DateBox\DateBoxViewModel.cs" />
     <Compile Include="ViewModels\DefaultViewModel.cs" />
+    <Compile Include="ViewModels\ISamplesViewModelBase.cs" />
     <Compile Include="ViewModels\MasterPageViewModel.cs" />
+    <Compile Include="ViewModels\SamplesViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\dx.android5.light.css" />
@@ -137,6 +140,7 @@
     <Content Include="Content\layouts\Popup\PopupLayout.css" />
     <Content Include="Content\layouts\Popup\PopupLayout.html" />
     <Content Include="Content\layouts\Popup\PopupLayout.js" />
+    <Content Include="Scripts\common.js" />
     <Content Include="Scripts\devextreme-localization\dx.webappjs.de.js" />
     <Content Include="Scripts\devextreme-localization\dx.webappjs.ja.js" />
     <Content Include="Scripts\devextreme-localization\dx.webappjs.ru.js" />
@@ -537,6 +541,7 @@
     <Content Include="Views\MasterPage.dotmaster" />
     <Content Include="Views\ControlSamples\Button\Button.dothtml" />
     <Content Include="Scripts\jquery-2.2.3.min.map" />
+    <Content Include="Views\ControlSamples\DateBox\DateBox.dothtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

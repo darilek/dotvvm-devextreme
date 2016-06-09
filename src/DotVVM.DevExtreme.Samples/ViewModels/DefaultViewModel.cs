@@ -7,23 +7,14 @@ using System.Threading.Tasks;
 using System.Web;
 using DotVVM.Framework.Hosting;
 using DotVVM.Framework.Routing;
-using DotVVM.Framework.ViewModel;
 
 namespace DotVVM.DevExtreme.Samples.ViewModels
 {
-    public interface ISamplesViewModelBase : IDotvvmViewModel
-    {
-        
-    }
-
-    public class SamplesViewModelBase : DotvvmViewModelBase, ISamplesViewModelBase
-    {
-        
-    }
-
     public class DefaultViewModel : SamplesViewModelBase
     {
-        public string Title { get; set; }
+        public override string Title { get; } = "DotVVM DevExtreme wrappers examples";
+
+
         public List<RouteBase> Routes { get; set; }
 
 
@@ -38,7 +29,8 @@ namespace DotVVM.DevExtreme.Samples.ViewModels
 
         public override Task Init()
         {
-            Routes = new List<RouteBase>(Context.Configuration.RouteTable);
+            var list = new List<RouteBase>(Context.Configuration.RouteTable);
+            Routes = list.GetRange(1, list.Count - 1);
             return base.Init();
         }
     }
