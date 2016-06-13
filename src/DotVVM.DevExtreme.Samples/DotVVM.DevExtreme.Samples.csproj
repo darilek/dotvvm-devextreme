@@ -103,6 +103,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="DotvvmStartup.cs" />
     <Compile Include="ViewModels\ControlSamples\Button\ButtonViewModel.cs" />
+    <Compile Include="ViewModels\ControlSamples\CheckBox\CheckBoxViewModel.cs" />
     <Compile Include="ViewModels\ControlSamples\DateBox\DateBoxViewModel.cs" />
     <Compile Include="ViewModels\DefaultViewModel.cs" />
     <Compile Include="ViewModels\ISamplesViewModelBase.cs" />
@@ -542,6 +543,7 @@
     <Content Include="Views\ControlSamples\Button\Button.dothtml" />
     <Content Include="Scripts\jquery-2.2.3.min.map" />
     <Content Include="Views\ControlSamples\DateBox\DateBox.dothtml" />
+    <Content Include="Views\ControlSamples\CheckBox\CheckBox.dothtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

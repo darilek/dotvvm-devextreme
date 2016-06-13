@@ -94,9 +94,11 @@
     <Compile Include="BasicValidations.cs" />
     <Compile Include="Controls\Button.cs" />
     <Compile Include="Controls\ButtonType.cs" />
+    <Compile Include="Controls\CheckBox.cs" />
     <Compile Include="Controls\DateBox.cs" />
     <Compile Include="Controls\FieldSet.cs" />
     <Compile Include="Controls\HtmlDevExtremeControlBase.cs" />
+    <Compile Include="Controls\HtmlEditWidgetControlBase.cs" />
     <Compile Include="Controls\IDevExtremeControl.cs" />
     <Compile Include="Controls\IHtmlDevExtremeControl.cs" />
     <Compile Include="Controls\KnockoutExtensions.cs" />

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DotVVM.Framework.Binding;
 using DotVVM.Framework.Controls;
+using Newtonsoft.Json;
 
 namespace DotVVM.DevExtreme.Controls
 {
@@ -29,7 +30,8 @@ namespace DotVVM.DevExtreme.Controls
             var binding = control.GetValueBinding(property);
             if (binding == null)
             {
-                group.Add(name, property.GetValue(control).ToString(), true);
+                string value = JsonConvert.ToString(property.GetValue(control));
+                group.Add(name, value, false);
 
             } else
             {
