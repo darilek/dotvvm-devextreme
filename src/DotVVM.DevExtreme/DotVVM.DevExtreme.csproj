@@ -102,6 +102,8 @@
     <Compile Include="Controls\IDevExtremeControl.cs" />
     <Compile Include="Controls\IHtmlDevExtremeControl.cs" />
     <Compile Include="Controls\KnockoutExtensions.cs" />
+    <Compile Include="Controls\TextBox.cs" />
+    <Compile Include="Controls\TextBoxMode.cs" />
     <Compile Include="DevExtremeExtensions.cs" />
     <Compile Include="DotvvmDevExtremeOptions.cs" />
     <Compile Include="Controls\HtmlWidgetControlBase.cs" />
