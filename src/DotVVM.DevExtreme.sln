@@ -1,11 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotVVM.DevExtreme", "DotVVM.DevExtreme\DotVVM.DevExtreme.csproj", "{F4573848-A944-4B1A-92B5-E5546F4B0348}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotVVM.DevExtreme.Samples", "DotVVM.DevExtreme.Samples\DotVVM.DevExtreme.Samples.csproj", "{1C7A9914-8CDC-4075-9422-37BD0E51C076}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{C0A17443-78ED-4669-B9F8-94944FBF289B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotVVM", "DotVVM", "{754EEFAC-5658-4DC2-AF9A-16BF6A028545}"
+	ProjectSection(SolutionItems) = preProject
+		References\DotVVM\DotVVM.Core.dll = References\DotVVM\DotVVM.Core.dll
+		References\DotVVM\DotVVM.Framework.dll = References\DotVVM\DotVVM.Framework.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +32,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{754EEFAC-5658-4DC2-AF9A-16BF6A028545} = {C0A17443-78ED-4669-B9F8-94944FBF289B}
 	EndGlobalSection
 EndGlobal

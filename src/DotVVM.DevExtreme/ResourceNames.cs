@@ -17,6 +17,8 @@ namespace DotVVM.DevExtreme
 
         public  static class Scripts
         {
+            public const string Globalize = "dx.globalize";
+            public const string Cldr = "dx.cldr";
             public const string DotvvmDevExtreme = "DotVVM.DevExtreme";
             public const string DxWebApps = "dx.webappjs";
         }

@@ -1,0 +1,20 @@
+[
+  {
+    "outputFileName": "Scripts/globalize-bundle.js",
+    "inputFiles": [
+        "Scripts/cldr.js",
+        "Scripts/cldr/unresolved.js",
+        "Scripts/cldr/supplemental.js",
+        "Scripts/cldr/event.js",
+
+        "Scripts/globalize.js",
+        "Scripts/globalize/unit.js",
+        "Scripts/globalize/relative-time.js",
+        "Scripts/globalize/plural.js",
+        "Scripts/globalize/number.js",
+        "Scripts/globalize/message.js",
+        "Scripts/globalize/date.js",
+        "Scripts/globalize/currency.js"
+    ]
+  }
+]

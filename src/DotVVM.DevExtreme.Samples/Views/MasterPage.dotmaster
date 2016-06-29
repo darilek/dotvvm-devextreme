@@ -15,7 +15,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
     </style>
-    <dot:RequiredResource Name="common" />
 </head>
 <body>
     <dot:UpdateProgress>

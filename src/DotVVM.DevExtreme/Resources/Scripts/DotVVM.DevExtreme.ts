@@ -6,7 +6,8 @@ ko.extenders["dxDatetime"] = (target, option) => {
     target.dxDatetime = ko.computed({
         read: function () {
             // return new Date(this());
-            return dotvvm.globalize.formatString("yyyy/MM/dd", this());
+            //return dotvvm.globalize.formatString("yyyy/MM/dd", this());
+            return new Date().toDateString();
         },
         write: function (value) {
             //var result = dotvvm.globalize.parseDate(value, "yyyy/MM/dd");

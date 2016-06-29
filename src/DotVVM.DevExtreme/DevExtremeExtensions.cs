@@ -43,11 +43,24 @@ namespace DotVVM.DevExtreme
             config.Resources.Register(ResourceNames.Styles.DxCommon, new StylesheetResource() { Url = options.DevExtremeCssCommonUrl });
             config.Resources.Register(ResourceNames.Styles.DxTheme, new StylesheetResource() { Url = options.DevExtremeCssThemeUrl, Dependencies = new[] { ResourceNames.Styles.DxCommon } });
 
+            ScriptResource cldrResource = new ScriptResource()
+            {
+                Url = options.CldrJsUrl,
+            };
+
+            ScriptResource globalizeResource = new ScriptResource()
+            {
+                Url = options.GlobalizeJsUrl,
+                Dependencies = new[] { ResourceNames.Scripts.Cldr }
+            };
+
+
+
             // scripts
             ScriptResource devExtremeResource = new ScriptResource()
             {
                 Url = options.DevExtremeJsUrl,
-                Dependencies = new [] { ResourceConstants.JQueryResourceName, ResourceConstants.KnockoutJSResourceName, ResourceConstants.GlobalizeResourceName, ResourceConstants.GlobalizeCultureResourceName}
+                Dependencies = new [] { ResourceConstants.JQueryResourceName, ResourceConstants.KnockoutJSResourceName, ResourceNames.Scripts.Globalize}
             };
 
             ScriptResource dotvvmDevExtremeResource = new ScriptResource()
@@ -58,6 +71,8 @@ namespace DotVVM.DevExtreme
                 Dependencies = new string[] { ResourceConstants.KnockoutJSResourceName, ResourceConstants.DotvvmResourceName }
             };
 
+            config.Resources.Register(ResourceNames.Scripts.Cldr, cldrResource);
+            config.Resources.Register(ResourceNames.Scripts.Globalize, globalizeResource);
             config.Resources.Register(ResourceNames.Scripts.DxWebApps, devExtremeResource);
             config.Resources.Register(ResourceNames.Scripts.DotvvmDevExtreme, dotvvmDevExtremeResource);
 
@@ -68,6 +83,8 @@ namespace DotVVM.DevExtreme
             context.ResourceManager.AddRequiredResource(ResourceNames.Styles.DxTheme);
             context.ResourceManager.AddRequiredResource(ResourceNames.Scripts.DxWebApps);
 
+            context.ResourceManager.AddRequiredResource(ResourceNames.Scripts.Cldr);
+            context.ResourceManager.AddRequiredResource(ResourceNames.Scripts.Globalize);
             context.ResourceManager.AddRequiredResource(ResourceNames.Scripts.DotvvmDevExtreme);
 
         }

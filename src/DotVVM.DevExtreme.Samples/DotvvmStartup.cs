@@ -21,11 +21,18 @@ namespace DotVVM.DevExtreme.Samples
             config.RouteTable.Add("Default", "", "Views/Default.dothtml");
             config.RouteTable.AutoDiscoverRoutes(new DefaultRouteStrategy(config));
 
-            config.Resources.Register("common", new ScriptResource() { Url = "~/Scripts/common.js", Dependencies = new[] { ResourceConstants.GlobalizeResourceName } });
+            //config.Resources.Register("common", new ScriptResource() { Url = "~/Scripts/common.js", Dependencies = new[] { ResourceConstants.GlobalizeResourceName } });
 
-            config.Resources.Register(ResourceConstants.GlobalizeCultureResourceName, new ScriptResource() {Url = "~/Scripts/jquery.globalize/cultures/globalize.culture.cs-CZ.js" });
+            //config.Resources.Register(ResourceConstants.GlobalizeCultureResourceName, new ScriptResource() {Url = "~/Scripts/jquery.globalize/cultures/globalize.culture.cs-CZ.js" });
 
             config.AddDevExtremeConfiguration();
+
+            // override cldr/globalize reosurces
+
+            config.Resources.Register(ResourceNames.Scripts.Cldr, new NullResource());
+            config.Resources.Register(ResourceNames.Scripts.Globalize, new ScriptResource() { Url = "~/Scripts/globalize-bundle.js" });
+
+
 
         }
     }
