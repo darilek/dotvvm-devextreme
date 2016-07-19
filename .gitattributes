@@ -3,6 +3,9 @@
 ###############################################################################
 * text=auto
 
+src/DotVVM.DevExtreme.Samples/Scripts/* linguist-vendored
+src/DotVVM.DevExtreme.Samples/Content/* linguist-vendored
+
 ###############################################################################
 # Set default behavior for command prompt diff.
 #
