@@ -5,25 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using DotVVM.Framework.ViewModel;
 
-namespace DotVVM.DevExtreme.Samples.ViewModels.ControlSamples.CheckBox
+namespace DotVVM.DevExtreme.Samples.ViewModels.ControlSamples.Switch
 {
-	public class CheckBoxViewModel : SamplesViewModelBase
-	{
+	public class SwitchViewModel : SamplesViewModelBase
+    {
         public bool? Checked { get; set; }
         public bool? Unchecked { get; set; }
-        public bool? Intermediate { get; set; }
-        public override string Title => "CheckBox sample";
+        public override string Title => "Switch sample";
 
-	    public override Task Load()
-	    {
+        public override Task Load()
+        {
             if (!this.Context.IsPostBack)
             {
                 this.Checked = true;
                 this.Unchecked = false;
-                this.Intermediate = null;
             }
             return base.Load();
-	    }
-	}
+        }
+
+    }
 }
 

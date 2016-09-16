@@ -1,0 +1,35 @@
+﻿@viewModel DotVVM.DevExtreme.Samples.ViewModels.ControlSamples.Switch.SwitchViewModel, DotVVM.DevExtreme.Samples
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="content">
+
+    <div class="dx-form" style="width: 500px">
+        <div class="dx-fieldset">
+            <div class="dx-fieldset-header">Default mode</div>
+            <div class="dx-field">
+                <div class="dx-field-label">Normal</div>
+                <div class="dx-field-value">
+                    <dx:Switch Value="{value: Checked}">
+                    </dx:Switch>
+                </div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">ReadOnly</div>
+                <div class="dx-field-value">
+                    <dx:Switch Value="{value: Checked}" ReadOnly="true">
+                    </dx:Switch>
+                </div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">Disabled</div>
+                <div class="dx-field-value">
+                    <dx:Switch Value="{value: Checked}" Enabled="false">
+                    </dx:Switch>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</dot:Content>
+

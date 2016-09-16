@@ -20,10 +20,10 @@ namespace DotVVM.DevExtreme.Samples.ViewModels
 
         public DefaultViewModel()
         {
-            if (HttpContext.Current.GetOwinContext().GetDotvvmContext() == null)
-            {
-                throw new Exception("DotVVM context was not found!");
-            }
+            //if (HttpContext.Current.GetOwinContext().GetDotvvmContext() == null)
+            //{
+            //    throw new Exception("DotVVM context was not found!");
+            //}
 
         }
 

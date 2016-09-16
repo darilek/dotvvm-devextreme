@@ -2,16 +2,23 @@
 /// <reference path="typings/dotvvm/DotVVM.d.ts" />
 /// <reference path="typings/globalize/globalize.d.ts" />
 /// <reference path="typings/devextreme/devextreme.d.ts" />
+DotvvmGlobalize.prototype.parseDate = function (value, format, culture) {
+    if (culture)
+        return dotvvm_Globalize.parseDate(value, format, culture);
+    else {
+        return dotvvm.globalize.parseDate(value, format);
+    }
+};
 ko.extenders["dxDatetime"] = function (target, option) {
     target.dxDatetime = ko.computed({
         read: function () {
             // return new Date(this());
-            //return dotvvm.globalize.formatString("yyyy/MM/dd", this());
-            return new Date().toDateString();
+            return dotvvm.globalize.formatString("yyyy/MM/dd", this());
+            //return new Date().toDateString();
         },
         write: function (value) {
             //var result = dotvvm.globalize.parseDate(value, "yyyy/MM/dd");
-            var result = Globalize.parseDate(value, "yyyy/MM/dd", "en-US");
+            var result = dotvvm.globalize.parseDate(value, "yyyy/MM/dd", "en-US");
             //var result = value.toISOString();
             //result = result.replace("Z", "0");
             this(result);

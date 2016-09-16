@@ -68,7 +68,7 @@ namespace DotVVM.DevExtreme
                 Url = "DotVVM.DevExtreme.Resources.Scripts.DotVVM.DevExtreme.js",
                 EmbeddedResourceAssembly = typeof(DevExtremeExtensions).Assembly.GetName().Name,
                 GlobalObjectName = "devextreme",
-                Dependencies = new string[] { ResourceConstants.KnockoutJSResourceName, ResourceConstants.DotvvmResourceName }
+                Dependencies = new string[] { ResourceConstants.KnockoutJSResourceName, ResourceConstants.DotvvmResourceName, ResourceConstants.GlobalizeResourceName, String.Format(ResourceConstants.GlobalizeCultureResourceName, "cs-cz") }
             };
 
             config.Resources.Register(ResourceNames.Scripts.Cldr, cldrResource);
