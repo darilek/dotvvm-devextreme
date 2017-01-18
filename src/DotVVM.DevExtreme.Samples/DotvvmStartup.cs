@@ -30,7 +30,7 @@ namespace DotVVM.DevExtreme.Samples
             // override cldr/globalize reosurces
 
             config.Resources.Register(ResourceNames.Scripts.Cldr, new NullResource());
-            config.Resources.Register(ResourceNames.Scripts.Globalize, new ScriptResource() { Url = "~/Scripts/globalize-bundle.js" });
+            config.Resources.Register(ResourceNames.Scripts.Globalize, new ScriptResource() { Location = new LocalFileResourceLocation("~/Scripts/globalize-bundle.js") });
 
 
 

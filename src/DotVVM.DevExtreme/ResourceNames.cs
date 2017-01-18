@@ -20,7 +20,7 @@ namespace DotVVM.DevExtreme
             public const string Globalize = "dx.globalize";
             public const string Cldr = "dx.cldr";
             public const string DotvvmDevExtreme = "DotVVM.DevExtreme";
-            public const string DxWebApps = "dx.webappjs";
+            public const string DxWeb = "dx.web";
         }
     }
 }
